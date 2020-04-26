@@ -311,4 +311,54 @@ button:focus{
 	font-weight: 500;
 	color: #d7b424;
 }
+.mainUser{
+	background-color: #ddd;
+}
+.leftUser{
+	width: 30%;
+	float: left;
+}
+.rightUser{
+	width: 70%;
+	float: right;
+}
+.tittleUser{
+	background-color: #444;
+	height: 35px;
+	text-align: center;
+	font-size: 22px;
+	font-weight: 500;
+}
+.imgAvatar{
+	height: 100px;
+	width: 100px;
+}
+.tittlePersonal{
+	height: 30px;
+	background-color: #777;
+	font-size: 18px;
+	font-weight: 500;
+}
+.personalRight{
+	height: 30px;
+	background-color: #666;
+	border-bottom: 3px solid #333;
+	font-size: 18px;
+	font-weight: 500;	
+}
+.inputUser{
+	height: 35px;
+	border-radius: 5px;
+	width: 300px;
+}
+.label{
+	display: inline-block;
+	width: 140px;
+}
+.selectDistrict{
+	display: none;
+}
+.selectDistrictActive{
+	display: inline;
+}
 

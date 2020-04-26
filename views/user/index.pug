@@ -1,0 +1,186 @@
+extends ../layout
+block content
+	.header
+		.header-titlle
+				.d-md-flex.pt-1.pb-1.relative.align-items-center
+					a.mr-5.padding-l(href='/')
+						img(src='/image/SAND KING.png', style='width: 100px; border-radius: 30px;')
+					ul.nav.d-flex.align-items-center.justify-content-center
+						li.nav-item.pr-2
+							a.nav-link(href='/muaBan#muaBan') Mua bán
+						li.nav-item.pr-2
+							a.nav-link(href='#') Dự án		
+						li.nav-item
+							a.nav-link(href='#') Tin tức
+	.mainUser.pt-5
+		.container(style='height:700px;')
+			.leftUser
+				.tittleUser.mb-5 TRANG CÁ NHÂN 
+				.d-flex.flex-column.align-items-center
+					.imgAvatar
+						img.imgAvatar(src='/image/avatar.png')
+					span.pt-3 Số tin rao
+				.tittlePersonal.mt-5
+					span.pl-2 Thông tin cá nhân
+				ul.mt-2
+					a(href='#')
+						li Thay đổi thông tin cá nhân
+					a(href='#')
+						li Thay đổi mật khẩu
+				.tittlePersonal.mt-2
+					span.pl-2 Quản lý tin rao
+				ul.mt-2
+					a(href='#')
+						li Quản lý tin rao bán/cho thuê
+					a(href='#')
+						li Đăng tin rao bán/cho thuê
+					a(href='#')
+						li Quản lý tin cần mua/cần thuê
+					a(href='#')
+						li Đăng tin rao bán/cho thuê
+			.rightUser.pl-3
+				.tittleUser.mb-3 THAY ĐỔI THÔNG TIN CÁ NHÂN
+				.personalRight.pl-2 Thông tin cá nhân
+				.pl-4.pt-3
+					.form.mb-2
+						.label
+							span Họ và tên (
+							span(style='color:red;') *
+							span )
+						input.inputUser(type='text')
+					.form.mb-2
+						.label
+							span Tên thường gọi
+						input.inputUser(type='text')
+					.form.mb-2
+						.label
+							span Ngày sinh
+						input.inputUser(type='text')
+					.form.mb-2
+						.label
+							span Giới tính
+						input.mr-3(type='radio', name='gender')
+						span.pr-2 Nam
+						input(type='radio', name='gender').ml-4
+						span.pr-2 Nữ
+					table.mt-3
+						tr
+							td(style='width: 140px;') Địa chỉ
+							td(style='width: 580px;')
+								table(style='width: 100%')
+									tr
+										td(style='width: 33%')
+											span Tỉnh/Thành phố (
+											span(style='color: red;') *
+											span )
+										td(style='width: 33%')
+											span Quận/Huyện (
+											span(style='color: red;') *
+											span )
+										td(style='width: 33%')
+											span Xã/Phường
+									tr
+										td
+											select.selectProvince(onchange='province')	
+												option.optionProvince(value= 0) --Tỉnh/Thành phố
+												option.optionProvince(value= 1) Hồ Chí Minh
+												option.optionProvince(value= 2) Hà Nội
+												option.optionProvince(value= 3) Đà Nẵng
+												option.optionProvince(value= 4) Bình Dương
+												option.optionProvince(value= 5) Đồng Nai
+												option.optionProvince(value= 6) Khánh Hòa
+												option.optionProvince(value= 7) Hải Phòng
+												option.optionProvince(value= 8) Long An
+												option.optionProvince(value= 9) Quảng Nam
+												option.optionProvince(value= 10) Bà Rịa Vũng Tàu
+												option.optionProvince(value= 11) Đăk Lăk
+												option.optionProvince(value= 12) Cần Thơ
+												option.optionProvince(value= 13) Bình Thuận
+												option.optionProvince(value= 14) Lâm Đồng
+												option.optionProvince(value= 15) Thừa Thiên Huế
+												option.optionProvince(value= 16) Kiên Giang
+												option.optionProvince(value= 17) Bắc Ninh
+												option.optionProvince(value= 18) Quảng Ninh
+												option.optionProvince(value= 19) Thanh Hóa
+												option.optionProvince(value= 21) Nghệ An
+												option.optionProvince(value= 22) Hải Dương
+												option.optionProvince(value= 23) Gia Lai
+												option.optionProvince(value= 24) Bình Phước
+												option.optionProvince(value= 25) Hưng Yên
+												option.optionProvince(value= 26) Bình Định
+												option.optionProvince(value= 27) Tiền Giang
+												option.optionProvince(value= 28) Thái Bình
+												option.optionProvince(value= 29) Bắc Giang
+												option.optionProvince(value= 30) Hòa Bình
+												option.optionProvince(value= 31) An Giang
+												option.optionProvince(value= 32) Vĩnh Phúc
+												option.optionProvince(value= 33) Tây Ninh
+												option.optionProvince(value= 34) Thái Nguyên
+												option.optionProvince(value= 35) Lào Cai
+												option.optionProvince(value= 36) Nam Định
+												option.optionProvince(value= 37) Quảng Ngãi
+												option.optionProvince(value= 38) Bến Tre
+												option.optionProvince(value= 39) Đăk Nông
+												option.optionProvince(value= 40) Cà Mau
+												option.optionProvince(value= 41) Vĩnh Long
+												option.optionProvince(value= 42) Ninh Bình
+												option.optionProvince(value= 43) Phú Thọ
+												option.optionProvince(value= 44) Ninh Thuận
+												option.optionProvince(value= 45) Phú Yên
+												option.optionProvince(value= 46) Hà Nam
+												option.optionProvince(value= 47) Hà Tĩnh
+												option.optionProvince(value= 48) Đồng Tháp
+												option.optionProvince(value= 49) Sóc Trăng
+												option.optionProvince(value= 50) Kon Tum
+												option.optionProvince(value= 51) Quảng Bình
+												option.optionProvince(value= 52) Quảng Trị
+												option.optionProvince(value= 53) Trà Vinh
+												option.optionProvince(value= 54) Hậu Giang
+												option.optionProvince(value= 55) Sơn La
+												option.optionProvince(value= 56) Bạc Liêu
+												option.optionProvince(value= 57) Yên Bái
+												option.optionProvince(value= 58) Tuyên Quang
+												option.optionProvince(value= 59) Điện Biên
+												option.optionProvince(value= 60) Lai Châu
+												option.optionProvince(value= 61) Lạng Sơn
+												option.optionProvince(value= 62) Hà Giang
+												option.optionProvince(value= 63) Bắc Cạn
+												option.optionProvince(value= 64) Cao Bằng
+										td
+											select.selectDistrict.selectDistrictActive
+												option --Quận/Huyện--
+											select.selectDistrict
+												option --Quận/Huyện--
+											select.selectDistrict
+												option --Quận/Huyện--
+											select.selectDistrict
+												option --Quận/Huyện--
+											select.selectDistrict
+												option --Quận/Huyện--
+											select.selectDistrict
+												option --Quận/Huyện--
+											select.selectDistrict
+												option --Quận/Huyện--
+											select.selectDistrict
+												option --Quận/Huyện--
+											select.selectDistrict
+												option --Quận/Huyện--
+											select.selectDistrict
+												option --Quận/Huyện--
+											select.selectDistrict
+												option --Quận/Huyện--
+											select.selectDistrict
+												option --Quận/Huyện--
+											select.selectDistrict
+												option --Quận/Huyện--
+											select.selectDistrict
+												option --Quận/Huyện--
+											select.selectDistrict
+												option --Quận/Huyện--
+											select.selectDistrict
+												option --Quận/Huyện--
+								script.
+									const optionProvince = document.getElementsByClassName("optionProvince");
+									function province(select){
+										
+									}
